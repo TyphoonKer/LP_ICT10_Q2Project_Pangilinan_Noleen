@@ -39,8 +39,9 @@ def compute_average(event):
     last = last_el.value if last_el else ""
 
     safe_set("name", f"Name: {first} {last}")
-    safe_set("output", f"Your General Weighted Average is {round(average, 2)}")
+    safe_set("output", f"Your average ability level is {round(average, 2)}")
 
     container = document.getElementById("grades_container")
     if container:
+
         container.style.display = "block"
