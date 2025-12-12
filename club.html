@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Club Information</title>
+
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+     rel="stylesheet">
+
+
+   <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+
+   <style>
+       body {
+           background-color: #420404;
+       }
+
+       .navbar {
+           background-color: #000000;
+       }
+
+       .club-card {
+           width: 900px;
+           margin: auto;
+           margin-top: 120px;
+           background: rgb(0, 0, 0);
+           border-radius: 20px;
+           padding: 40px;
+           box-shadow: rgba(0,0,0,0.1);
+           border: 3px solid #390000;
+       }
+
+
+       h1 {
+           color: #6a0000;
+           font-weight: bold;
+       }
+
+
+       select {
+           width: 100%;
+           border: 2px solid #490a00;
+           padding: 12px;
+           border-radius: 6px;
+           color: #480303;
+       }
+
+
+       .info-box {
+           background: #410b00;
+           color: #ffffff;
+           padding: 20px;
+           border-radius: 10px;
+           margin-top: 25px;
+           border: 2px solid #2f0800;
+           display: none;
+           white-space: pre-wrap;
+       }
+
+
+       button {
+           background-color: #390a00;
+           color: white;
+           width: 100%;
+           padding: 14px;
+           border-radius: 10px;
+           border: none;
+           font-size: 18px;
+           margin-top: 20px;
+       }
+
+   </style>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-md fixed-top">
+   <div class="container-fluid">
+       <a class="navbar-brand" href="index.html">
+           <img src="d20.webp" width="60" height="60" class="rounded-circle">
+       </a>
+
+
+       <div class="collapse navbar-collapse">
+           <ul class="navbar-nav me-auto">
+               <li class="nav-item"><a class="nav-link text-white" href="home.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link text-white" href="calc.html">Stat Calculator</a></li>
+               <li class="nav-item"><a class="nav-link text-white" href="club.html">Club Info</a></li>
+           </ul>
+       </div>
+   </div>
+</nav>
+
+<div class="club-card">
+
+
+   <h1>Club Information</h1>
+
+
+   <label style="color:#360a00">Select a club:</label>
+  
+   <select id="club_select">
+       <option value="DM">Mastering Dungeon Master Club</option>
+       <option value="Bard">Bards Instruments Club</option>
+       <option value="Cleric">Clerics Basic Aid Club</option>
+   </select>
+
+
+   <button py-click="show_info">Show Club Information</button>
+
+
+   <div id="club_output" class="info-box"></div>
+
+</div>
+
+
+</div>
+
+<script type="py" src="club.py"></script>
+
+
+</body>
+</html>
+
